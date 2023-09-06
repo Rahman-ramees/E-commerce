@@ -1,0 +1,62 @@
+<!-- <p>seller-auth works!</p> -->
+
+<!-- ***********tamplate form**************** -->
+            <!-- using ngForm    -->
+            
+            
+<mat-tab-group mat-stretch-tabs="false" class=" bg-gray-200 h-screen" mat-align-tabs="center">
+  <mat-tab label="Log-in">  
+    <div class="w-[600px] h-[600px] bg-gray-900 p-10 ml-[630px] shadow-xl rounded-3xl">
+      <h1 class="text-white text-4xl text-center ">Log-in Now!</h1>
+      <form #sellerLogin="ngForm" class="flex flex-col">
+        <input type="text" class="border-2 border-black h-16 mt-10 rounded-lg text-[20px] text-center w-[400px] mx-auto" ngModel name="Email" placeholder="E-mail">
+        <input type="password" class="border-2 border-black h-16 mt-10 rounded-lg text-[20px] text-center w-[400px] mx-auto" ngModel name="Password" placeholder="Password">
+         
+        <div class="ml-16 mt-10">
+            <input type="checkbox" class=""> 
+            <label class="text-white ml-2">I agree with terms and conditions</label>
+        </div>                                                                        <!--(click)="show()" -->
+        <button routerLink="/home" class="bg-white w-[200px] h-[50px] rounded-xl ml-40 mt-10  text-2xl"  (click)="LogIn(sellerLogin.value)"> Log in</button><!-- (click)="show()" -->
+        <h3 class="text-red-600 absolute top-[540px] left-[815px]">Not registered account/<b class="text-white">sign-up</b></h3>
+      </form>
+    </div> 
+  </mat-tab>
+
+  <mat-tab label="Sign-up">
+    
+    <div class="w-[600px] h-[750px] bg-gray-900 p-10 ml-[650px] shadow-xl rounded-3xl">
+        <h1 class="text-white text-4xl text-center mt-5">Sign-up Now!</h1>
+      <form #sellerSignUp="ngForm" class="flex flex-col">
+        <input type="text" class="border-2 border-black h-16 mt-10 rounded-lg text-[20px] text-center w-[400px] mx-auto" ngModel name="Email" placeholder="E-mail">
+        <input type="password" class="border-2 border-black h-16 mt-10 rounded-lg text-[20px] text-center w-[400px] mx-auto" ngModel name="Password" placeholder="Password">
+         
+        <div class="flex flex-row ml-6">
+            <input type="text" class="h-16 ml-10 w-[175px] mt-10 rounded-lg text-center" ngModel name="Fname" placeholder="First Name">
+            <input type="text" class="h-16 ml-10 w-[175px] mt-10 rounded-lg text-center" ngModel name="Sname" placeholder="Second Name">
+        </div>
+        <div class="ml-16 mt-10">
+            <input type="radio" name="radiogroup1" id="rd1">
+            <label class="text-white ml-2">Male</label>
+            <input class="ml-10" type="radio" name="radiogroup1" >
+            <label class="text-white ml-2">Female</label>
+        </div>
+        <div class="ml-16 mt-10">
+            <input type="checkbox" class=""> 
+            <label class="text-white ml-2">I agree with terms and conditions</label>
+        </div>                                                                  <!--(click)="show()" -->
+        <button routerLink="/home" class="bg-white w-[200px] h-[50px] rounded-xl ml-40 mt-14   text-2xl" (click)="signUp(sellerSignUp.value)"> Sign Up </button>
+        <h3 class="text-red-600 absolute top-[640px] left-[820px]">Already have an account/<b class="text-white">Log-in</b></h3>
+      </form>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+
+  <div>Some tags before</div>
+
+
+
+
+ 
+
+ 

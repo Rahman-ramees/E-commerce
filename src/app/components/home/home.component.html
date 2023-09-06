@@ -1,0 +1,52 @@
+<!-- <p>home works!</p> -->
+
+    <app-header></app-header>
+
+    <!-- <mat-drawer-container class="example-container " autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+          <p>Auto-resizing sidenav</p>
+          <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+          <button (click)="showFiller = !showFiller" mat-raised-button>
+            Toggle extra text
+          </button>
+          <div class="w-[5rem] h-20 bg-gray-900 text-white">ramees</div>
+        </mat-drawer>
+        <button  type="button" mat-button (click)="drawer.toggle()">
+            <svg onclick="hiden()" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6 bg-black">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        <div  class="example-sidenav-content h-52">jhbjh</div>
+    
+      </mat-drawer-container> -->
+
+    <div class="p-5">
+        <owl-carousel-o [options]="customOptions" >
+            <ng-template carouselSlide><img class="w-screen h-[600px] mt-[90px]" src="./../../../assets/imgslide4.jpg" alt=""></ng-template>  
+            <ng-template carouselSlide><img class="w-screen h-[600px] mt-[90px]" src="./../../../assets/imgslide1.jpg" alt=""></ng-template>  
+            <ng-template carouselSlide><img class="w-screen h-[600px] mt-[90px]" src="./../../../assets/imgslide2.jpg" alt=""></ng-template>  
+            <ng-template carouselSlide><img class="w-screen h-[600px] mt-[90px]" src="./../../../assets/imgslide3.jpg" alt=""></ng-template>  
+        </owl-carousel-o>
+    </div>
+
+
+
+    <div class="grid grid-cols-4  p-10 gap-5 absolute top-[800px] ">
+        <div *ngFor="let item of ourproduct" class="w-[450px] h-[550px] bg-gray-200 rounded-lg opacity-80 shadow-xl overflow-hidden">
+            <img class="w-max h-[300px] mx-auto mix-blend-darken p-5 object-cover hover:scale-125" src="{{item.image}}" alt="">
+            <h1 class="font-bold  pl-6 overflow-hidden truncate">{{item.title}}</h1>
+            <h1 class="pl-6 ml-5">Price:  <b>{{item.price}}</b></h1>
+            <h1 class="overflow-hidden truncate p-5">{{item.description}}</h1>
+            <button (click)="addToCart(item)" class="bg-black text-white w-[150px] h-10 rounded-lg ml-36  hover:bg-white hover:border-2 hover:border-black hover:text-black">Add to cart</button>
+        </div>
+    </div> 
+
+
+
+    <!-- ****************** our details ***************** -->
+
+    <div class="absolute top-[235rem]">
+        <button class="w-screen h-16 bg-gray-800 text-white text-center hover:bg-slate-700 hover:text-2xl">Back to top</button>
+        <img src="./../../../assets/ourdetails1.png" alt="">
+        <img src="./../../../assets/ourdetails2.png" alt="">
+    </div>
