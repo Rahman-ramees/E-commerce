@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CartService } from 'src/app/service/cart.service';
 import { ServiceCallService } from 'src/app/service/service-call.service';
 
-
 @Component({
   selector: 'app-seller-auth',
   templateUrl: './seller-auth.component.html',
@@ -29,6 +28,7 @@ export class SellerAuthComponent implements OnInit{
     console.warn(data);
     this.cartService.logData.push(data)
     localStorage.setItem("data",data.Email)
+
   }
   
 }

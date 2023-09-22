@@ -1,4 +1,6 @@
-<!-- <p>cart works!</p> -->
+
+<!-- ***************show cart items****************** -->
+
 <ng-container *ngIf="len>=1">
     <div *ngIf="checkWindo==true"  class="blur-3xl w-screen bg-slate-100 h-screen absolute top-0 left-0"> </div>
     <div >
@@ -50,6 +52,7 @@
 </ng-container>
 
 
+<!-- ****************zero products *******************  -->
 
 <ng-container *ngIf="products.length==0">
 
@@ -68,6 +71,8 @@
 </ng-container>
 
 
+
+<!-- ****************payment details of items***************** -->
 
 <ng-container *ngIf="checkWindo==true">
     <div class="w-[80rem]  absolute top-20 left-[280px] z-10 border-2 border-gray-200 shadow-2xl shadow-black rounded-lg ">
@@ -95,11 +100,11 @@
            </div>
             <div  class="flex flex-row h-20 p-5 border-b-2 border-gray-200">
                 <h1 class="">Shipping</h1>
-                <p class="absolute left-[70rem] text-2xl font-bold">{{1000|currency}}</p>
+                <p class="absolute left-[70rem] text-2xl font-bold">{{shippingChrg|currency}}</p>
             </div>
            <div  class="flex flex-row h-20 p-5 border-b-2 border-gray-200">
                 <h1 class="">Tottal</h1>
-                <p class="absolute left-[70rem] text-2xl font-bold">{{2598|currency}}</p>
+                <p class="absolute left-[70rem] text-2xl font-bold">{{MasterGrndTotall|currency}}</p>
            </div>
         </div>
     </div>

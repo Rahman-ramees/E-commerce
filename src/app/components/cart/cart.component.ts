@@ -16,6 +16,8 @@ export class CartComponent implements OnInit{
   public quantity : number =0
   public products :any =[];
   public grandTotalll : number=0
+  public MasterGrndTotall : number=0
+  public shippingChrg :number = 1000
   // public priceob :number = 0
 
   
@@ -53,10 +55,8 @@ export class CartComponent implements OnInit{
   
   // this.grandTotalll =  q.totalcamount
   // console.log(this.grandTotalll);
-  
- 
-  
  }
+
  lessQnt(q:any){
   q.quantity-= 1
   q.totalcamount -= q.price 
@@ -65,11 +65,13 @@ export class CartComponent implements OnInit{
  showpay(){
   this.classs="p-5 blur-md bg-gray-400"
   this.checkWindo=true
-this.products.map((e: { totalcamount: any; })=>{
- this.grandTotalll = this.grandTotalll+ e.totalcamount
-})
-   
- }
+
+  this.products.map((e: { totalcamount: any; })=>{
+    this.grandTotalll = this.grandTotalll+ e.totalcamount
+    this.MasterGrndTotall= this.grandTotalll + this.shippingChrg
+  }) 
+  }
+
  hidewindow(){
   this.checkWindo=false
   this.classs=false

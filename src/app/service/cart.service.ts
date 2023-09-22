@@ -40,7 +40,7 @@ export class CartService implements OnInit {
       this.CartItemList.push(product)
     }
     else {
-      console.log("false");
+      console.log("Already added this item");
     }
 
     this.ProductList.next(this.CartItemList)
@@ -63,10 +63,12 @@ export class CartService implements OnInit {
 
   removeCartItem(product: any) {
     this.CartItemList.map((a: any, index: any) => {
-      if (product.id === a.id) {
-        this.CartItemList.splice(index, 1);
+      if (product._id === a._id) {
+        this.CartItemList.splice(index,1);
+        // console.log(product.id);
       }
     });
+    
   }
 
   removeAllCart() {

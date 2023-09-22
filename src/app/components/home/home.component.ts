@@ -17,8 +17,11 @@ export class HomeComponent implements OnInit{
     touchDrag: true,
     pullDrag: true,
     dots: true,
+    lazyLoad:true,
     autoplay:true,
-    autoplayTimeout:3500,
+    // fluidSpeed:true,
+    smartSpeed:900,
+    autoplayTimeout:3000,
     navSpeed: 900,
     navText: ['< Prev', 'Next >'],
     responsive: {
@@ -41,7 +44,7 @@ export class HomeComponent implements OnInit{
 
   constructor(private servi:ServiceCallService,private cartService : CartService){}
 
-  public productList : any;
+  // public productList : any;
   public ourproduct : any;
   public logindata:any
 
@@ -67,12 +70,12 @@ export class HomeComponent implements OnInit{
       this.ourproduct.forEach((a:any)=>{
         Object.assign(a,{quantity:1,total:a.price})
       })
-      
     })
   }
   addToCart(item :any){
       this.cartService.addToCart(item)
       // this.cartService.grandtotalTest.push(item.totalcamount)
+      alert("Product Added")
       
   }
   // showFiller=true
